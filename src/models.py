@@ -61,6 +61,7 @@ class Vehicle(db.Model):
         }
 
 class Character(db.Model):
+    __tablename__ = "character"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(100), unique=True)
     genre: Mapped[str] = mapped_column(String(50))
